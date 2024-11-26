@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Recipe App -make whatever you want</title>
+</head>
+<body>
+     <header>
+        <nav>
+            <div class="logo">
+                <img src="Images/recipe-logo.png" alt="">
+                <h3>Recipe</h3>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="find your recipe here.." autocomplete="off" class="search-input">
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </nav>
+     </header>
+     <main>
+        <section>
+            <div class="recipe-container">
+                <h3 class="text-msg">Search your favourite recipe</h3>
+                <div class="recipe-content"></div>
+            </div>
+            <div class="recipe-popUp">
+                <button id="close-btn">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+                <div class="recipe-popup-content"></div>
+            </div>
+        </section>
+     </main>
+     <footer></footer>
+
+     <script src="app.js"></script>
+</body>
+</html>

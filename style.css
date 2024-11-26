@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #ebebeb;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+/*Header Styling Start here*/
+header nav{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color:#cbcbcb;
+    border-bottom: 2px solid #777;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .logo img{
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(2px 2px 2px #000);
+}
+nav .logo h3{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #777;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+nav form input{
+    height: 40px;
+    width: 250px;
+    padding: 0 12px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    outline: none;
+    background:#ebebeb;
+}
+nav form button{
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #777;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+}
+/*Header Styling End here*/
+/*Main Styling Start here*/
+main section .recipe-container{
+    text-align: center;
+    font-size: 24px;
+    margin: 100px 0px;
+    font-weight: 500;
+    color: #777;
+}
+main section .recipe-container .recipe-content{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-block: 1rem;
+}
+.recipe-div{
+    border: 2px solid #777;
+    border-radius: 10px;
+}
+.recipe-content .recipe-div img{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    border-bottom: 2px solid #777;
+}
+.recipe-div > h3{
+    font-size: 18px;
+}
+.recipe-div > p{
+    font-size: 16px;
+}
+.recipe-div > .recipe-btn{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background-color: #777;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    margin-block: 20px;
+}
+
+.recipe-popUp{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ebebeb;
+    position: absolute;
+    top: 0;
+}
+.recipe-popUp > button{
+    float: right;
+    margin: 10px;
+    border: none;
+    font-size: 24px;
+    color:#333;
+    cursor: pointer;
+    background: none;
+}
+.recipe-popup-content{
+    padding: 20px;
+}
+.recipe-popup-content > h3{
+    color: #333;
+    font-size: 36px;
+    text-decoration:underline;
+    letter-spacing: 1px;
+}
+.recipe-popup-content > table{
+    margin-block: 10px;
+}
+.recipe-popup-content > table > th,td{
+    text-align: center;
+    padding: 10px;
+    color: #333;
+}
+.recipe-popup-content > .instruction-div > button{
+    height: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    margin-block: 10px;
+    cursor: pointer;
+}
+.recipe-popup-content > .instruction-div > .bgblue{
+    background-color: blue;
+}
+.recipe-popup-content > .instruction-div > .bgred{
+    background-color: red;
+}
+.recipe-popup-content > .instruction-div > button >a{
+    color: white;
+    text-decoration: none;
+}
+/*Main Styling End here*/
+
+@media screen and (max-width:600px) {
+    header nav{
+        flex-direction: column;
+    }
+    nav .logo{
+        flex-direction: column;
+    }
+    nav .logo h3{
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+    nav form input{
+        width:300px;
+        margin-block:10px;
+    }
+    nav form button{
+        display: none;
+    }
+    main section .recipe-container{
+        margin: 200px 0;
+        font-size: 18px;
+    }
+    .recipe-popup-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
